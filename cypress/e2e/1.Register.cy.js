@@ -13,7 +13,7 @@ describe('User Register', () => {
     cy.url().should('include', '/login');
     //กรอกข้อมูลusername email
     cy.get('input[data-qa="signup-name"]').type('Test User');
-    cy.get('input[data-qa="signup-email"]').type(testEmail);
+    cy.get('input[data-qa="signup-email"]').type('Testuser@User.com');
     //กดปุ่มสมัคร
     cy.get('button[data-qa="signup-button"]').click();
     //check page
@@ -22,7 +22,7 @@ describe('User Register', () => {
     //กรอกข้อมูลส่วนตัว
     cy.get('#id_gender1').check();
     cy.get('#name').should('have.value', 'Test User');
-    cy.get('#password').type('Test@1234');
+    cy.get('#password').type('qwertyu');
     cy.get('#days').select('19');
     cy.get('#months').select('June');
     cy.get('#years').select('2003')
