@@ -1,5 +1,5 @@
-describe('User Login', () => {
-    it('Run Login test with correct email and password', () => {
+describe('User Delete Account', () => {
+    it('Run Delete Account test', () => {
         cy.visit('https://automationexercise.com');
 
         cy.get('body').should('contain', 'Home');
@@ -15,7 +15,11 @@ describe('User Login', () => {
         cy.get('button[data-qa="login-button"]').click();
         //check user
         cy.contains('Logged in as').should('contain', 'Test User');
-
-
-    })
-})
+        //ลบaccount
+        cy.contains('Delete Account').click();
+        //check page
+        cy.get('h2.title.text-center b').should('contain.text', 'Account Deleted!');
+        //กดปุ่มไปต่อ
+        cy.get('a[data-qa="continue-button"]').click();
+         });
+    });

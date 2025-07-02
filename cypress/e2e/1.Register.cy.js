@@ -48,12 +48,7 @@ describe('User Register', () => {
     cy.get('a[data-qa="continue-button"]').click();
     //check user
     cy.contains('Logged in as').should('contain', 'Test User');
-    //ลบaccount
-    cy.contains('Delete Account').click();
-    //check page
-    cy.get('h2.title.text-center b').should('contain.text', 'Account Deleted!');
-    //กดปุ่มไปต่อ
-    cy.get('a[data-qa="continue-button"]').click();
+
 
   })
 })
