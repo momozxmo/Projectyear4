@@ -1,8 +1,8 @@
-describe('Verify Place order register while checkout', () => {
+describe('Verify Download invoice', () => {
     const randomSuffix = Date.now();
     const testEmail = `testuser_${randomSuffix}@example.com`;
 
-  it('Run Place order', () => {
+  it('Run Download invoice', () => {
     cy.visit('https://automationexercise.com');
 
     cy.get('body').should('contain', 'Home');

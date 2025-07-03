@@ -1,6 +1,6 @@
-describe('Verify Review product', () => {
+describe('Verify Add recommended product', () => {
 
-  it('Run Review product', () => {
+  it('Run Add recommended product', () => {
     cy.visit('https://automationexercise.com');
 
     cy.get('body').should('contain', 'Home');
