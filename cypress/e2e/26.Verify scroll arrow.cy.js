@@ -1,6 +1,6 @@
-describe('Verify subscription functionality', () => {
+describe('Verify scroll arrow', () => {
 
-  it('Run Subscription in Home', () => {
+  it('Run scroll arrow', () => {
     cy.visit('https://automationexercise.com');
 
         cy.get('body').should('contain', 'Home');
